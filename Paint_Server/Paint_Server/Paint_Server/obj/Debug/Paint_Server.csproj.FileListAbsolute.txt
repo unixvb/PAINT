@@ -1,0 +1,16 @@
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\bin\Debug\Paint_Server.exe.config
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\bin\Debug\Paint_Server.exe
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\bin\Debug\Paint_Server.pdb
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.csprojResolveAssemblyReference.cache
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\MainWindow.baml
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\MainWindow.g.cs
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\App.g.cs
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server_MarkupCompile.cache
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.g.resources
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.Properties.Resources.resources
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.csproj.GenerateResource.Cache
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.exe
+D:\Ivaniv\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.pdb
+D:\Ivaniv\PAINT\PAINT\Paint_Server\Paint_Server\Paint_Server\bin\Debug\Paint_Server.exe.config
+D:\Ivaniv\PAINT\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.exe
+D:\Ivaniv\PAINT\PAINT\Paint_Server\Paint_Server\Paint_Server\obj\Debug\Paint_Server.pdb
