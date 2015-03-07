@@ -1,0 +1,9 @@
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\bin\Debug\Draw_client.exe
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\bin\Debug\Draw_client.pdb
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\obj\Debug\Draw_client.csprojResolveAssemblyReference.cache
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\obj\Debug\Client.Form1.resources
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\obj\Debug\Draw_client.csproj.GenerateResource.Cache
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\obj\Debug\Draw_client.exe
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\obj\Debug\Draw_client.pdb
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_client\bin\Debug\Draw_client.exe.config

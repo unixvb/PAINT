@@ -1,0 +1,9 @@
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\bin\Debug\Draw_server.exe.config
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\bin\Debug\Draw_server.exe
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\bin\Debug\Draw_server.pdb
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.Form1.resources
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.Properties.Resources.resources
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.csproj.GenerateResource.Cache
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.exe
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.pdb
+C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.csprojResolveAssemblyReference.cache
