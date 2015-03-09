@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -14,7 +15,7 @@ namespace Draw_server
         public int DrawMode;
 
         [DataMember]
-        public int Color;
+        public Color Color;
 
         [DataMember]
         public int X0, Y0, X, Y;

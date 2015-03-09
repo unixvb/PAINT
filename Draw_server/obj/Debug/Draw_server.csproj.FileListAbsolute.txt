@@ -7,3 +7,12 @@ C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.csproj.Ge
 C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.exe
 C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.pdb
 C:\Users\Andriy\Desktop\GitHub\PAINT\Draw_server\obj\Debug\Draw_server.csprojResolveAssemblyReference.cache
+C:\Users\TEMP\Desktop\PAINT\Draw_server\bin\Debug\Draw_server.exe.config
+C:\Users\TEMP\Desktop\PAINT\Draw_server\obj\Debug\Draw_server.exe
+C:\Users\TEMP\Desktop\PAINT\Draw_server\obj\Debug\Draw_server.pdb
+C:\Users\TEMP\Desktop\PAINT\Draw_server\bin\Debug\Draw_server.exe
+C:\Users\TEMP\Desktop\PAINT\Draw_server\bin\Debug\Draw_server.pdb
+C:\Users\TEMP\Desktop\PAINT\Draw_server\obj\Debug\Draw_server.csprojResolveAssemblyReference.cache
+C:\Users\TEMP\Desktop\PAINT\Draw_server\obj\Debug\Draw_server.Form1.resources
+C:\Users\TEMP\Desktop\PAINT\Draw_server\obj\Debug\Draw_server.Properties.Resources.resources
+C:\Users\TEMP\Desktop\PAINT\Draw_server\obj\Debug\Draw_server.csproj.GenerateResource.Cache

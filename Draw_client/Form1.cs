@@ -21,7 +21,7 @@ namespace Client
 		private bool MenBarInit = false;
 		private bool drag = false;
 		private int DrawMode = 1;
-        private int color = 1;
+        private Color color;
 		private int x0, y0, x, y;
 		private int cx, cy;
 		private System.Windows.Forms.ImageList imageList1;
@@ -31,8 +31,6 @@ namespace Client
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.ToolTip toolTip1;
         private Button button6;
-        private Button button5;
-        private Button button4;
         private TrackBar trackBar1;
         private Label label1;
         private TextBox txtServerIP;
@@ -43,6 +41,8 @@ namespace Client
         private Socket clientSocket;
         private EndPoint epServer;
         private byte[] dataStream = new byte[1024];
+        private Button button4;
+    
         private delegate void DisplayMessageDelegate(string message);
         private DisplayMessageDelegate displayMessageDelegate = null;
 
@@ -75,13 +75,12 @@ namespace Client
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.txtServerIP = new System.Windows.Forms.TextBox();
             this.btnConnect = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -101,13 +100,12 @@ namespace Client
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.txtServerIP);
             this.panel1.Controls.Add(this.btnConnect);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.trackBar1);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -117,6 +115,16 @@ namespace Client
             this.panel1.Size = new System.Drawing.Size(684, 26);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(87, 1);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Color";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txtServerIP
             // 
@@ -156,42 +164,15 @@ namespace Client
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.Green;
+            this.button6.BackColor = System.Drawing.Color.Red;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ImageList = this.imageList1;
-            this.button6.Location = new System.Drawing.Point(155, 3);
+            this.button6.Location = new System.Drawing.Point(171, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(21, 21);
             this.button6.TabIndex = 3;
             this.toolTip1.SetToolTip(this.button6, "Draw a Rectangle");
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Blue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ImageList = this.imageList1;
-            this.button5.Location = new System.Drawing.Point(128, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(21, 21);
-            this.button5.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.button5, "Draw a Rectangle");
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ImageList = this.imageList1;
-            this.button4.Location = new System.Drawing.Point(101, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(21, 21);
-            this.button4.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.button4, "Draw a Rectangle");
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -273,6 +254,7 @@ namespace Client
 			Color bckColor = this.BackColor;
 			gB.Clear(bckColor);
             button4.ForeColor = Color.Black;
+            color = Color.Red;
 
             this.displayMessageDelegate = new DisplayMessageDelegate(this.DisplayMessage);
 		}
@@ -304,18 +286,7 @@ namespace Client
 			cy = y - y0;
 			Pen pen = new Pen(Color.Blue);
             pen.Width = trackBar1.Value;
-            switch (color)
-            {
-                case 1:
-                    pen.Color = Color.Red;
-                    break;
-                case 2:
-                    pen.Color = Color.Blue;
-                    break;
-                case 3:
-                    pen.Color = Color.Green;
-                    break;
-            }
+            pen.Color = color;
 			switch (DrawMode)
 			{
 				case 1:
@@ -353,18 +324,7 @@ namespace Client
             pen.Width = trackBar1.Value;
 			if (drag)
             {
-                switch (color)
-                {
-                    case 1:
-                        pen.Color = Color.Red;
-                        break;
-                    case 2:
-                        pen.Color = Color.Blue;
-                        break;
-                    case 3:
-                        pen.Color = Color.Green;
-                        break;
-                }
+                pen.Color = color;
 				switch (DrawMode)
 				{
 					case 1:
@@ -455,30 +415,6 @@ namespace Client
             Send();
 		}
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            button4.ForeColor = Color.Black;
-            button5.ForeColor = Color.Blue ;
-            button6.ForeColor = Color.Green;
-            color = 1;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            button4.ForeColor = Color.Red;
-            button5.ForeColor = Color.Black;
-            button6.ForeColor = Color.Green;
-            color = 2;
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            button4.ForeColor = Color.Red;
-            button5.ForeColor = Color.Blue;
-            button6.ForeColor = Color.Black;
-            color = 3;
-        }
-
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
             label1.Text = Convert.ToString(trackBar1.Value);
@@ -556,6 +492,21 @@ namespace Client
         private void DisplayMessage(string messge)
         {
             //rtxtConversation.Text += messge + Environment.NewLine;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDlg = new ColorDialog();
+            colorDlg.AllowFullOpen = false;
+            colorDlg.AnyColor = true;
+            colorDlg.SolidColorOnly = false;
+            colorDlg.Color = color;
+
+            if (colorDlg.ShowDialog() == DialogResult.OK)
+            {
+                color = colorDlg.Color;
+                button6.BackColor = color;
+            }
         }
 	}
 }

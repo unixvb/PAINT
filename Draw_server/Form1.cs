@@ -103,18 +103,7 @@ namespace Draw_server
 
                         Pen pen = new Pen(Color.Blue);
                         pen.Width = draw.PenSize;
-                        switch (draw.Color)
-                        {
-                            case 1:
-                                pen.Color = Color.Red;
-                                break;
-                            case 2:
-                                pen.Color = Color.Blue;
-                                break;
-                            case 3:
-                                pen.Color = Color.Green;
-                                break;
-                        }
+                        pen.Color = draw.Color;
                         switch (draw.DrawMode)
                         {
                             case 1:
