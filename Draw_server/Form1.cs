@@ -107,12 +107,17 @@ namespace Draw_server
                         switch (draw.DrawMode)
                         {
                             case 1:
-                                graphics.DrawLine(pen, x0, y0, x, y);
-                                break;
+                                {
+                                    graphics.DrawLine(pen, x0, y0, x, y);
+                                    break;
+                                }
                             case 2:
-                                graphics.DrawEllipse(pen, x0, y0, cx, cy);
-                                break;
+                                {
+                                    graphics.DrawEllipse(pen, x0, y0, cx, cy);
+                                    break;
+                                }
                             case 3:
+                                {
                                 if (cx >= 0 && cy >= 0)
                                     graphics.DrawRectangle(pen, x0, y0, cx, cy);
                                 else if (cx >= 0 && cy <= 0)
@@ -122,6 +127,33 @@ namespace Draw_server
                                 else if (cx <= 0 && cy <= 0)
                                     graphics.DrawRectangle(pen, x0 + cx, y0 + cy, -1 * cx, -1 * cy);
                                 break;
+                                }
+                            case 4:
+                                {
+                                    SolidBrush Brush = new SolidBrush(draw.Color);
+                                    if (cx >= 0 && cy >= 0)
+                                    {
+                                        graphics.FillRectangle(Brush, x0, y0, cx, cy);
+                                    }
+                                    else if (cx >= 0 && cy <= 0)
+                                        graphics.FillRectangle(Brush, x0, y0 + cy, cx, -1 * cy);
+                                    else if (cx <= 0 && cy >= 0)
+                                        graphics.FillRectangle(Brush, x0 + cx, y0, -1 * cx, cy);
+                                    else if (cx <= 0 && cy <= 0)
+                                        graphics.FillRectangle(Brush, x0 + cx, y0 + cy, -1 * cx, -1 * cy);
+                                    break;
+                                }
+                            case 5:
+                                {
+                                    SolidBrush Brush = new SolidBrush(draw.Color);
+                                    graphics.FillEllipse(Brush, x0, y0, cx, cy);
+                                    break;
+                                }
+                            case 6:
+                                {
+                                    //////////////
+                                    break;
+                                }
                         }
                         IntPtr desktopDC = GetDC(IntPtr.Zero);
                         Graphics g = Graphics.FromHdc(desktopDC);
